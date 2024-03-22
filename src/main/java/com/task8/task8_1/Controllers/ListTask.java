@@ -1,4 +1,6 @@
-package com.task8.task8_1.Models;
+package com.task8.task8_1.Controllers;
+
+import com.task8.task8_1.Models.Task;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +23,7 @@ public class ListTask {
         }
     }
 
-    private int randomTime(Random random) {
+    public static int randomTime(Random random) {
         int hours = random.nextInt(24);
         int minutes = random.nextInt(60);
         return hours*100+minutes;

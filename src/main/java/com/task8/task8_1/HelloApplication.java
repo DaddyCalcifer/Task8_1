@@ -14,6 +14,15 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("Hello!");
         stage.setScene(scene);
+
+        try {
+            Class.forName("org.postgresql.Driver");
+        } catch (ClassNotFoundException e) {
+            System.out.println("Не удалось загрузить драйвер JDBC");
+            e.printStackTrace();
+            return;
+        }
+
         stage.show();
     }
 
